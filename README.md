@@ -41,7 +41,11 @@ Toutes optionnelles. Vercel, **Settings, Environment Variables**.
 | `ADMIN_USER` | Utilisateur pour accéder à `/admin`. |
 | `ADMIN_PASS` | Mot de passe pour `/admin`. Tant que les deux ne sont pas définis, la section reste ouverte à tous. |
 
-Mets `ADMIN_USER` et `ADMIN_PASS` avant le premier partage public.
+Mets `ADMIN_USER` et `ADMIN_PASS` avant le premier partage public, puis
+redéploie: les variables ne sont lues qu'au déploiement suivant.
+
+La protection de `/admin` vit dans `proxy.ts` à la racine. C'est la convention
+Next 16, l'ancien nom `middleware.ts` est déprécié.
 
 ## Ajouter un arrêt
 
